@@ -40,7 +40,7 @@ butG1.addEventListener( "click", function ()
 
 function func_AnimeGundam ()
 {
-    animeContent.innerHTML = gundamAnimeTab[animeContent_But];
+    animeContent.innerHTML = gundamAnimeTab[[animeContent_But]];
 }
 
 function func_Desactiv() {
