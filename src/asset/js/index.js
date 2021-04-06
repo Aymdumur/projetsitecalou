@@ -13,33 +13,28 @@ function $$ ( expr, con )
 
 var animeContent = $( "#anime__content" );
 var butG1 = $( "#button__G1" );
-var gundamAnimeTab = [
-    [
-        [
-            "<div id='content__summary'> <h1>Mobile Suit Gundam</h1> <p>Année de sortie : 1979</p> <img src='./asset/png/gundamPoster.webp'> </div> <div id='content__characters'><h2>Les personnages principaux de la série</h2> <div><p><b>Char Aznable</b></p> <img src='/MSG-Char.webp'></div></div>"
-        ]
-    ]
-];
-var butG1_activated = 0;
+var animeContentG = $("#G" + 0);
 var animeContent_But = 0;
 
 butG1.addEventListener( "click", function ()
 {
     animeContent_But = 0
     if(butG1_activated == 0){
+        var animeContentG = $("#G" + 1);
         func_AnimeGundam();
-        butG1_activated = 1;
+        animeContent_But = 1;
     }
     else{
         func_Desactiv();
+        animeContent_But = 0;
     }
 } );
 
 function func_AnimeGundam ()
 {
-    animeContent.innerHTML = gundamAnimeTab[animeContent_But];
+    animeContentG.style.display = "initial";
 }
 
 function func_Desactiv() {
-    animeContent.innerHTML = "";
+    animeContentG.style.display = "none";
 }
