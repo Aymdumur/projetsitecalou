@@ -14,6 +14,7 @@ function $$ ( expr, con )
 var animeContent = $( "#anime__content" );
 var butG1 = $( "#button__G1" );
 var G1 = $( "#G1" );
+var animeContent_But = 0;
 
 butG1.addEventListener( "click", function ()
 {
