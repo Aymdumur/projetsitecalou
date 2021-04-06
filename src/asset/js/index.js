@@ -26,7 +26,7 @@ butG1.addEventListener( "click", function ()
 {
     G2.style.display = "none";
     G3.style.display = "none";
-    if ( animeContent_But == 0 || animeContent_ButActive == 1)
+    if ( animeContent_But == 0)
     {
         G1.style.display = "unset";
         animeContent_But = 1;
@@ -50,7 +50,7 @@ butG2.addEventListener( "click", function ()
 {
     G1.style.display = "none";
     G3.style.display = "none";
-    if ( animeContent_But == 0 || animeContent_ButActive == 1)
+    if ( animeContent_But == 0)
     {
         G2.style.display = "unset";
         animeContent_But = 1;
