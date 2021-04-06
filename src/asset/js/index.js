@@ -13,27 +13,18 @@ function $$ ( expr, con )
 
 var animeContent = $( "#anime__content" );
 var butG1 = $( "#button__G1" );
-var animeContent_But = 0;
+var G1 = $( "#G1" );
 
 butG1.addEventListener( "click", function ()
 {
-    if(animeContent_But == 0){
-        var animeContentG = $("#G1");
-        func_AnimeGundam(animeContentG);
+    if ( animeContent_But == 0 )
+    {
+        G1.style.display = "unset";
         animeContent_But = 1;
     }
-    else{
-        func_Desactiv();
+    else
+    {
+        G1.style.display = "none";
         animeContent_But = 0;
     }
 } );
-
-function func_AnimeGundam ()
-{
-    animeContentG.style.display = "unset";
-    console.log(animeContentG)
-}
-
-function func_Desactiv() {
-    animeContentG.style.display = "none";
-}
