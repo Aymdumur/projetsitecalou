@@ -18,6 +18,9 @@ var gundamAnimeTab = [
         [
             "<div> <h1>Mobile Suit Gundam</h1> <p>Année de sortie : 1979</p> <img src='./asset/png/gundamPoster.webp'> </div> <div><h2>Les personnages principaux de la série</h2> <div><p><b>Char Aznable</b></p></div></div>"
         ]
+        [
+            "<p>Truc</p>"
+        ]
     ]
 ];
 var butG1_activated = 0;
@@ -31,7 +34,7 @@ butG1.addEventListener( "click", function ()
         butG1_activated = 1;
     }
     else{
-
+        func_Desactiv();
     }
 } );
 
