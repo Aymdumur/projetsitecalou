@@ -32,6 +32,12 @@ butG1.addEventListener( "click", function ()
         animeContent_But = 1;
         animeContent_ButActive = 1;
     }
+    else if ( animeContent_ButActive == 1)
+    {
+        G1.style.display = "unset";
+        animeContent_But = 1;
+        animeContent_ButActive = 0;
+    }
     else
     {
         G1.style.display = "none";
@@ -50,6 +56,12 @@ butG2.addEventListener( "click", function ()
         animeContent_But = 1;
         animeContent_ButActive = 1;
     }
+    else if ( animeContent_ButActive == 1)
+    {
+        G2.style.display = "unset";
+        animeContent_But = 1;
+        animeContent_ButActive = 0;
+    }
     else
     {
         G2.style.display = "none";
@@ -62,11 +74,17 @@ butG3.addEventListener( "click", function ()
 {
     G1.style.display = "none";
     G2.style.display = "none";
-    if ( animeContent_But == 0 || animeContent_ButActive == 1)
+    if ( animeContent_But == 0)
     {
         G3.style.display = "unset";
         animeContent_But = 1;
         animeContent_ButActive = 1;
+    }
+    else if ( animeContent_ButActive == 1)
+    {
+        G3.style.display = "unset";
+        animeContent_But = 1;
+        animeContent_ButActive = 0;
     }
     else
     {
