@@ -23,13 +23,26 @@ var gundamAnimeTab = [
         ]
     ]
 ];
+var butG1_activated = 0;
+var animeContent_But = 0
 
 butG1.addEventListener( "click", function ()
 {
-    func_AnimeGundam();
+    animeContent_But = 1
+    if(butG1_activated == 0){
+        func_AnimeGundam();
+        butG1_activated = 1;
+    }
+    else{
+
+    }
 } );
 
 function func_AnimeGundam ()
 {
-    animeContent.innerHTML = gundamAnimeTab;
+    animeContent.innerHTML = gundamAnimeTab[animeContent_But];
+}
+
+function func_Desactiv() {
+    animeContent.innerHTML = "";
 }
