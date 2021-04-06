@@ -16,7 +16,7 @@ var butG1 = $( "#button__G1" );
 var gundamAnimeTab = [
     [
         [
-            "<div id='content__summary'> <h1>Mobile Suit Gundam</h1> <p>Année de sortie : 1979</p> <img src='./asset/png/gundamPoster.webp'> </div> <div id='content__characters'><h2>Les personnages principaux de la série</h2> <div><p><b>Char Aznable</b></p> <img src='asset/png/MSG-Char.webp'></div></div>"
+            "<div id='content__summary'> <h1>Mobile Suit Gundam</h1> <p>Année de sortie : 1979</p> <img src='./asset/png/gundamPoster.webp'> </div> <div id='content__characters'><h2>Les personnages principaux de la série</h2> <div><p><b>Char Aznable</b></p> <img src='/MSG-Char.webp'></div></div>"
         ]
     ]
 ];
