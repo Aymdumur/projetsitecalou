@@ -18,8 +18,7 @@ var animeContent_But = 0;
 
 butG1.addEventListener( "click", function ()
 {
-    animeContent_But = 0
-    if(butG1_activated == 0){
+    if(animeContent_But == 0){
         var animeContentG = $("#G" + "1");
         func_AnimeGundam();
         animeContent_But = 1;
