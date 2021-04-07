@@ -271,6 +271,10 @@ ul {
     display: flex;
     justify-content: center;
   }
+
+  .G__summary p:last-child {
+    text-align: center;
+  }
 }
 
 /* Règles CSS pour les écrans de minimum 1200px */
