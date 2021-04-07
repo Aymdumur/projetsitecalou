@@ -13,6 +13,8 @@
 
 /* Le HTML pour des écrand téléphone de moins de 700px */
 
+/* Réglage des tailles de police */
+
 html {
   background-color: #f2f2f2;
   font-size: 5vw;
@@ -20,41 +22,8 @@ html {
 
 /* Le header */
 
-header {
-  position: fixed;
-  top: 0px;
-  right: 0px;
-  height: auto;
-  background-color: #464646;
-  padding: 0 1rem 0 1rem;
-}
-
-header > div {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  height: 3rem;
-}
-
-/* les boutons du header */
-
-header button {
-  color: white;
-  text-decoration: none;
-  background-color: #464646;
-  padding: 0.1rem 1rem 0.1rem 1rem;
-  border: 2px solid white;
-}
-
-header button:hover {
-  color: gold;
-  background-color: #464646;
-  border: 2px solid rgb(204, 174, 2);
-}
-
-header button {
-  margin-right: 1rem;
+header{
+    display: none;
 }
 
 /* La présentation générale de gundam et la première partie */
@@ -152,6 +121,46 @@ ul {
   /* Réglage taille des textes */
   html {
     font-size: 3.5vw;
+  }
+
+/* Le header */
+
+header {
+    display: unset;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    height: auto;
+    background-color: #464646;
+    padding: 0 1rem 0 1rem;
+  }
+  
+  header > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 3rem;
+  }
+  
+  /* les boutons du header */
+  
+  header button {
+    color: white;
+    text-decoration: none;
+    background-color: #464646;
+    padding: 0.1rem 1rem 0.1rem 1rem;
+    border: 2px solid white;
+  }
+  
+  header button:hover {
+    color: gold;
+    background-color: #464646;
+    border: 2px solid rgb(204, 174, 2);
+  }
+  
+  header button {
+    margin-right: 1rem;
   }
 
   /* Retire l'affichage de chaque animé */
