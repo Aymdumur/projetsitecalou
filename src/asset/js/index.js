@@ -12,6 +12,8 @@ function $$ ( expr, con )
 }
 
 var animeContent = $( "#anime__content" );
+var butQuickchangeNext = $("#quickchangeNext");
+var butQuickchangePrev = $("#quickchangePrev");
 var butG1 = $( "#button__G1" );
 var butG2 = $( "#button__G2" );
 var butG3 = $( "#button__G3" );
@@ -23,9 +25,7 @@ var animeContent_ButG2 = 0;
 var animeContent_ButG3 = 0;
 
 
-butG1.addEventListener( "click", function ()
-{
-    console.log( "Test 6" );
+function func__butG1() {
     if ( animeContent_ButG2 == 1 || animeContent_ButG3 == 1 )
     {
         G2.style.display = "none";
@@ -43,11 +43,9 @@ butG1.addEventListener( "click", function ()
         G1.style.display = "none";
         animeContent_ButG1 = 0;
     }
-} );
+}
 
-butG2.addEventListener( "click", function ()
-{
-    console.log( "Test 6" );
+function func__butG2() {
     if ( animeContent_ButG1 == 1 || animeContent_ButG3 == 1 )
     {
         G1.style.display = "none";
@@ -65,11 +63,9 @@ butG2.addEventListener( "click", function ()
         G2.style.display = "none";
         animeContent_ButG2 = 0;
     }
-} );
+}
 
-butG3.addEventListener( "click", function ()
-{
-    console.log( "Test 6" );
+function func__butG3() {
     if ( animeContent_ButG1 == 1 || animeContent_ButG2 == 1 )
     {
         G1.style.display = "none";
@@ -88,4 +84,49 @@ butG3.addEventListener( "click", function ()
         G3.style.display = "none";
         animeContent_ButG3 = 0;
     }
+}
+
+butG1.addEventListener( "click", function ()
+{
+    func__butG1();
 } );
+
+butG2.addEventListener( "click", function ()
+{
+
+    func__butG2();
+} );
+
+butG3.addEventListener( "click", function ()
+{
+
+    func__butG3();
+
+} );
+
+butQuickchangeNext.addEventListener("click", function(){
+    if (animeContent_ButG1 == 1) {
+        func__butG2();
+    }
+    else if(animeContent_ButG2 == 1){
+        func__butG3();
+    }
+    else{
+        func__butG1();
+    }
+})
+
+butQuickchangePrev.addEventListener("click", function(){
+    if (animeContent_ButG1 == 1) {
+        func__butG3();
+    }
+    else if(animeContent_ButG2 == 1){
+        func__butG1();
+    }
+    else if(animeContent_ButG3 == 1){
+        func__butG2();
+    }
+    else{
+        func__butG3();
+    }
+})

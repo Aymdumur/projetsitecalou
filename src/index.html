@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,17 +9,16 @@
   </head>
 
   <body>
-    <h2>GOOOOOOOOOOOD MORNING ANGOULEME !!</h2>
-    <p>GUNDAM !!</p>
+    <h2>Gundam, plus qu'une passion, des gros robots</h2>
     <section id="watiz">
       <article id="watiz__bio">
-        <h3><b>GUNDAM</b> c'est quoi ?</h3>
+        <h3>Avant tout, une présentation de Gundam</h3>
         <div>
           <p>
-            Gundam c'est un anime de mecha maintenant vieux de 42 ans, il est
-            connu pour ses thèmes anti-guerre et sa volonté d'être réaliste dans
-            le design des robots ainsi que des personnages et des conflits
-            représentés à l'écran.
+            Gundam c'est un anime de mecha maintenant vieux de 42 ans produit
+            par Sunrise, il est connu pour ses thèmes anti-guerre et sa volonté
+            d'être réaliste dans le design des robots ainsi que des personnages
+            et des conflits représentés à l'écran.
           </p>
           <p>
             Aujourd'hui la série est extrémement populaire au Japon avec des
@@ -49,11 +48,21 @@
         </div>
       </article>
       <article id="anime__content">
-        <div id="G1">
-          <div id="G1__summary">
+        <button id="quickchangeNext">Gundam suivant</button>
+        <button id="quickchangePrev">Gundam précédent</button>
+        <div id="G1" class="anime__Gundam">
+          <div id="G1__summary" class="G__summary">
             <h1>Mobile Suit Gundam</h1>
             <p>Année de sortie : 1979</p>
-            <img src="./asset/img/G1/Misc/PosterGundam.webp" />
+            <div>
+              <img src="./asset/img/G1/Misc/PosterGundam.webp" />
+              <video controls>
+                <source
+                  src="./asset/mp4/Mobile Suit Gundam 0079 Op.mp4"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
             <p>
               La première série Gundam, elle raconte l'histoire de la Guerre
               d'un An où des colonies spatiales, mené par le Duché de Zeon,
@@ -62,7 +71,7 @@
               Suit expérimental.
             </p>
           </div>
-          <div id="G1__characters">
+          <div id="G1__characters" class="G__characters">
             <h2>Les personnages principaux de la série (et mes favoris)</h2>
             <div>
               <p><b>Char Aznable</b></p>
@@ -91,7 +100,6 @@
             <div>
               <p><b>Amuro Ray</b></p>
               <img src="./asset/img/G1/Cast/AmuroRay.webp" />
-              <p>Le protagoniste</p>
               <p>
                 Le personnage principal de la série, au début de la série il
                 n'est qu'un simple civil et tout au long de la série on va
@@ -100,24 +108,9 @@
                 C'est un Newtype, pour l'expliquer rapidement c'est un magicien
                 de l'espace.
               </p>
-              <p>
-                Le plus gros défaut d'Amuro sera d'être constamment accompagné
-                d'Haro, qui passera le reste de sa vie à contaminer les autres
-                séries Gundam de sa présence jusqu'à devenir la mascotte de
-                Sunrise, le studio d'animation.
-              </p>
-            </div>
-            <h2>Le personnage que je déteste le plus de la série</h2>
-            <div>
-              <p><b>Haro</b></p>
-              <img src="./asset/img/G1/Cast/Haro.webp" />
-              <p>
-                Haro aux côtés d'Amuro, inconscient de la menace qui rôde à sa
-                droite.
-              </p>
             </div>
           </div>
-          <div id="G1__mobileSuit">
+          <div id="G1__mobileSuit" class="G__mobileSuit">
             <h2>
               Mes Mobiles Suits favoris (et ceux des personnages principaux)
             </h2>
@@ -140,10 +133,7 @@
               </p>
               <p>
                 En plus d'être le premier Gundam, il va devenir une mascotte
-                (pas comme Haro cette boule verte de malheur qui décide de
-                s'incruster dans la quasi-totalitée des séries Gundams et qui
-                tout comme moi n'est jamais drôle) et une icone au Japon, il
-                l'ont même recrée en taille réelle.
+                pour la Sunrise et une icone au Japon.
               </p>
             </div>
             <div>
@@ -157,11 +147,20 @@
             </div>
           </div>
         </div>
-        <div id="G2">
-          <div id="G2__summary">
+        <div id="G2" class="anime__Gundam">
+          <div id="G2__summary" class="G__summary">
             <h1>Mobile Suit Zeta Gundam</h1>
             <p>Année de sortie : 1985</p>
-            <img src="./asset/img/G2/Misc/PosterZGundam.webp" />
+            <div>
+              <img src="./asset/img/G2/Misc/PosterZGundam.webp" />
+              <video controls>
+                <source
+                  src="./asset/mp4/Mobile Suit Zeta Gundam Op.mp4"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
+
             <p>
               Ma première série Gundam, donc de façon totalement objective la
               meilleure, elle se passe 7 ans après Mobile Suit Gundam. Après la
@@ -174,7 +173,7 @@
               Spacenoïdes pour arrêter les Titans.
             </p>
           </div>
-          <div id="G2__characters">
+          <div id="G2__characters" class="G__characters">
             <h2>
               Les personnages principaux de la série et surtout mes favoris
               (dans l'ordre de mon préféré à mon moins préféré)
@@ -284,17 +283,8 @@
                 Qubeley.
               </p>
             </div>
-            <div>
-              <h2>Le personnage que je déteste le plus de la série</h2>
-              <p><b>Haro</b></p>
-              <img src="./asset/img/G2/Cast/haro.webp" />
-              <p>
-                Kamille en train de commettre la pire erreur de sa vie : mettre
-                Haro dans son cockpit.
-              </p>
-            </div>
           </div>
-          <div id="G2__mobileSuit">
+          <div id="G2__mobileSuit" class="G__mobileSuit">
             <h2>Mes Mobiles Suits favoris</h2>
             <div>
               <p>Le <b>Zeta Gundam</b> de Kamille Bidan</p>
@@ -315,8 +305,10 @@
               <p>
                 Le Mobile Suit d'Haman Karn, bien qu'il ne puisse pas se
                 transformer c'est le premier Mobile Suit de la franchise équipé
-                de funnel, des tourelles contrôlées par la pensée du pilote. Il
-                est un de mes Mobiles Suits préférés car il a une apparence
+                de funnel, des tourelles contrôlées par la pensée du pilote.
+              </p>
+              <p>
+                Il est un de mes Mobiles Suits préférés car il a une apparence
                 différente des autres avec un style un peu insecte, comme un
                 papillon. Aussi il est piloté par une pilote extrémement cool et
                 les combats dans lesquels il apparait sont fort sympathique.
@@ -377,11 +369,20 @@
             </div>
           </div>
         </div>
-        <div id="G3">
-          <div id="G3__summary">
+        <div id="G3" class="anime__Gundam">
+          <div id="G3__summary" class="G__summary">
             <h1>Mobile Suit Victory Gundam</h1>
             <p>Année de sortie : 1983</p>
-            <img src="./asset/img/G1/Misc/PosterGundam.webp" />
+            <div>
+              <img src="./asset/img/G3/Misc/PosterVictoryGundam.webp" />
+              <video controls>
+                <source
+                  src="./asset/mp4/Victory Gundam OP.mp4"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
+
             <p>
               Ce passant 74 ans après les évènements du premier Gundam,
               l'histoire suit Uso Ewin, un enfant de 13 ans, qui sera forcé
@@ -398,7 +399,7 @@
               l'espace.
             </p>
           </div>
-          <div id="G3__characters">
+          <div id="G3__characters" class="G__characters">
             <h2>Mes personnages favoris de la série</h2>
             <div>
               <p><b>Uso Ewin</b></p>
@@ -422,9 +423,13 @@
                 masque et en tissu et non en métal ce qui lui donne deux points
                 pour l'originalité.
               </p>
+              <p>
+                Des fois, comme sur l'image, il ne le porte même pas ! Une
+                première pour un clone de Char Aznable !
+              </p>
             </div>
           </div>
-          <div id="G3__mobileSuit">
+          <div id="G3__mobileSuit" class="G__mobileSuit">
             <h2>Mes Mobiles Suits favoris</h2>
             <div>
               <p>Le <b>Victory Gundam Assault Buster 2</b> d'Uso Ewin</p>
