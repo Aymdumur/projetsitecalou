@@ -226,6 +226,10 @@ ul {
     margin-bottom: 20px;
   }
 
+  .G__mobileSuit div img:nth-of-type(2) {
+    display: unset;
+  }
+
   /* Mise en page des personnages / Mobiles Suits */
 
   .G__characters div,
