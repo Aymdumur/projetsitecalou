@@ -127,3 +127,22 @@ ul{
         margin-bottom: 20px;
     }
 }
+
+@media (min-width:1200px){
+    html{
+        font-size: 1vw;
+    }
+
+    #anime__button button{
+        display: unset;
+        font-size: 0.75vw;
+    }
+
+    .anime__Gundam h2{
+        font-size: 40px;
+    }
+    
+    .anime__Gundam h1{
+        font-size: 50px;
+    }
+}
