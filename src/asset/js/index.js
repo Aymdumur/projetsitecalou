@@ -17,8 +17,8 @@ function $$ ( expr, con )
 
 // Récupération des boutons / des textes
 var animeContent = $( "#anime__content" );
-var butQuickchangeNext = $("#quickchangeNext");
-var butQuickchangePrev = $("#quickchangePrev");
+var butQuickchangeNext = $( "#quickchangeNext" );
+var butQuickchangePrev = $( "#quickchangePrev" );
 var butG1 = $( "#button__G1" );
 var butG2 = $( "#button__G2" );
 var butG3 = $( "#button__G3" );
@@ -32,7 +32,8 @@ var animeContent_ButG2 = 0;
 var animeContent_ButG3 = 0;
 
 // Les fonctions pour afficher/masquer chaque partie
-function func__butG1() {
+function func__butG1 ()
+{
     if ( animeContent_ButG2 == 1 || animeContent_ButG3 == 1 )
     {
         G2.style.display = "none";
@@ -52,7 +53,8 @@ function func__butG1() {
     }
 }
 
-function func__butG2() {
+function func__butG2 ()
+{
     if ( animeContent_ButG1 == 1 || animeContent_ButG3 == 1 )
     {
         G1.style.display = "none";
@@ -72,7 +74,8 @@ function func__butG2() {
     }
 }
 
-function func__butG3() {
+function func__butG3 ()
+{
     if ( animeContent_ButG1 == 1 || animeContent_ButG2 == 1 )
     {
         G1.style.display = "none";
@@ -113,52 +116,64 @@ butG3.addEventListener( "click", function ()
 } );
 
 // Les EventListener pour les boutons de changement rapide d'animé
-butQuickchangeNext.addEventListener("click", function(){
-    if (animeContent_ButG1 == 1) {
+butQuickchangeNext.addEventListener( "click", function ()
+{
+    if ( animeContent_ButG1 == 1 )
+    {
         func__butG2();
     }
-    else if(animeContent_ButG2 == 1){
+    else if ( animeContent_ButG2 == 1 )
+    {
         func__butG3();
     }
-    else{
+    else
+    {
         func__butG1();
     }
-})
+} );
 
-butQuickchangePrev.addEventListener("click", function(){
-    if (animeContent_ButG1 == 1) {
+butQuickchangePrev.addEventListener( "click", function ()
+{
+    if ( animeContent_ButG1 == 1 )
+    {
         func__butG3();
     }
-    else if(animeContent_ButG2 == 1){
+    else if ( animeContent_ButG2 == 1 )
+    {
         func__butG1();
     }
-    else if(animeContent_ButG3 == 1){
+    else if ( animeContent_ButG3 == 1 )
+    {
         func__butG2();
     }
-    else{
+    else
+    {
         func__butG3();
     }
-})
+} );
 
 //les functions pour le changement de police et de taille de police
 
 //la fonction gérant le changement de police
 var nbdystexte = 0;
-var html = $("body");
+var html = $( "body" );
 
-function fun_dystexte() {
-    if (nbdystexte == 0) {
+function fun_dystexte ()
+{
+    if ( nbdystexte == 0 )
+    {
         //passe en police dysléxique
-        console.log("Changement police dyslexique");
+        console.log( "Changement police dyslexique" );
         dystexte = "font-family:OpenDyslexic-Regular;";
         nbdystexte = 1;
-    } else {
+    } else
+    {
         //passe en police arial
-        console.log("Changement police initial");
+        console.log( "Changement police initial" );
         dystexte = "font-family:arial;";
         nbdystexte = 0;
     }
-    return (dystexte);
+    return ( dystexte );
 }
 
 // les fonctions gérant la taille de la police
@@ -168,52 +183,61 @@ var nbtailletxt = 20;
 var tailletxt = "";
 
 //diminution de la taille de la police
-function fun_dimtailletxt() {
-    if (diminutiontxt < 0) {
+function fun_dimtailletxt ()
+{
+    if ( diminutiontxt < 0 )
+    {
         nbtailletxt = nbtailletxt - 2;
         tailletxt = "font-size:" + nbtailletxt + "px;";
         augmentationtxt = augmentationtxt + 1;
         diminutiontxt = diminutiontxt + 1;
-        console.log("Diminution taille de la police");
-    } else {
-        console.log("Trop de changement de taille");
+        console.log( "Diminution taille de la police" );
+    } else
+    {
+        console.log( "Trop de changement de taille" );
     }
-    return (tailletxt);
+    return ( tailletxt );
 }
 
 //augmentation de la taille de la police
-function fun_augtailletxt() {
-    if (augmentationtxt > 0) {
+function fun_augtailletxt ()
+{
+    if ( augmentationtxt > 0 )
+    {
         nbtailletxt = nbtailletxt + 2;
         tailletxt = "font-size:" + nbtailletxt + "px;";
         augmentationtxt = augmentationtxt - 1;
         diminutiontxt = diminutiontxt - 1;
-        console.log("Augmentation taille de la police");
-    } else {
-        console.log("Trop de changement de taille");
+        console.log( "Augmentation taille de la police" );
+    } else
+    {
+        console.log( "Trop de changement de taille" );
     }
-    return (tailletxt);
+    return ( tailletxt );
 }
 
 //bouton dyslexie
-var dysbutton = $("#dystexte");
-dysbutton.addEventListener("click", function() {
+var dysbutton = $( "#dystexte" );
+dysbutton.addEventListener( "click", function ()
+{
     fun_dystexte();
-    html.setAttribute("style", tailletxt + dystexte);
-});
+    html.setAttribute( "style", tailletxt + dystexte );
+} );
 
 //bouton de la taille de la police
-var txtplus = $("#txtplus");
-var txtmoins = $("#txtmoins");
+var txtplus = $( "#txtplus" );
+var txtmoins = $( "#txtmoins" );
 
 //augmentation
-txtplus.addEventListener("click", function() {
+txtplus.addEventListener( "click", function ()
+{
     fun_augtailletxt();
-    html.setAttribute("style", tailletxt + dystexte);
-});
+    html.setAttribute( "style", tailletxt + dystexte );
+} );
 
 //diminution
-txtmoins.addEventListener("click", function() {
+txtmoins.addEventListener( "click", function ()
+{
     fun_dimtailletxt();
-    html.setAttribute("style", tailletxt + dystexte);
-});
+    html.setAttribute( "style", tailletxt + dystexte );
+} );

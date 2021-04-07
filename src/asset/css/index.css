@@ -18,12 +18,17 @@
 html {
   background-color: #f2f2f2;
   font-size: 5vw;
+  text-align: justify;
+}
+
+p {
+  padding: 10px;
 }
 
 /* Le header */
 
-header{
-    display: none;
+header {
+  display: none;
 }
 
 /* La présentation générale de gundam et la première partie */
@@ -31,6 +36,7 @@ header{
 #anime > h2 {
   border-bottom: solid grey 2px;
   text-align: center;
+  padding-bottom: 0.3vh;
 }
 
 /* La partie présentation d'un animé */
@@ -123,18 +129,24 @@ ul {
     font-size: 3.5vw;
   }
 
-/* Le header */
+  /* Réglage alignement des textes */
 
-header {
+  h2,
+  h1 {
+    text-align: center;
+  }
+
+  /* Le header */
+
+  header {
     display: unset;
     position: fixed;
     top: 0px;
     right: 0px;
-    height: auto;
-    background-color: #464646;
-    padding: 0 1rem 0 1rem;
+    width: 100%;
+    background-color: #797979;
   }
-  
+
   header > div {
     display: flex;
     flex-direction: row;
@@ -142,25 +154,31 @@ header {
     align-items: center;
     height: 3rem;
   }
-  
-  /* les boutons du header */
-  
-  header button {
+
+  /* Mise en style des boutons */
+
+  button {
     color: white;
     text-decoration: none;
-    background-color: #464646;
+    background-color: #797979;
     padding: 0.1rem 1rem 0.1rem 1rem;
     border: 2px solid white;
   }
-  
-  header button:hover {
+
+  button:hover {
     color: gold;
-    background-color: #464646;
+    background-color: #797979;
     border: 2px solid rgb(204, 174, 2);
   }
-  
+
   header button {
     margin-right: 1rem;
+  }
+
+  /* Mise en page de la présentation */
+  body > h2:first-of-type
+  {
+    margin-top: 120px;
   }
 
   /* Retire l'affichage de chaque animé */
@@ -181,6 +199,7 @@ header {
   #anime__button button {
     display: unset;
     font-size: 2.5vw;
+    margin: 0.5vw 0 0.5vw 0;
   }
 
   .anime__Gundam img,
@@ -194,20 +213,39 @@ header {
 
   /* Réglage des images */
 
+  .G__characters img,
   .G__mobileSuit img {
     display: unset;
-    float: left;
-    height: 300px;
-  }
-
-  .G__characters img {
-    display: unset;
-    float: right;
-    height: 450px;
+    float: none;
+    height: auto;
+    width: 200px;
+    margin-left: 45%;
   }
 
   .G__summary div img {
     margin-bottom: 20px;
+  }
+
+  /* Mise en page des personnages / Mobiles Suits */
+
+  .G__characters div,
+  .G__mobileSuit div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .G__characters div p,
+  .G__mobileSuit div p,
+  li {
+    width: 20%;
+    margin-left: 40%;
+  }
+
+  li {
+    list-style: none;
+    margin-bottom: 15px;
   }
 
   /* Mise en page des résumés */
@@ -217,6 +255,11 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+
+  .G__summary p {
+    width: 20%;
+    margin-left: 40%;
   }
 }
 
@@ -239,5 +282,17 @@ header {
 
   .anime__Gundam h1 {
     font-size: 50px;
+  }
+
+  /* Mise en page du header */
+  header {
+    display: unset;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    height: auto;
+    width: unset;
+    background-color: #797979;
+    padding: 0 1rem 0 1rem;
   }
 }
