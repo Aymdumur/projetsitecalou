@@ -243,9 +243,11 @@ ul {
   .G__characters div p,
   .G__mobileSuit div p,
   li {
-    width: 20%;
-    left: auto;
-    right: auto;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
   }
 
   li {
@@ -263,9 +265,11 @@ ul {
   }
 
   .G__summary p {
-    width: 20%;
-    left: auto;
-    right: auto;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
   }
 }
 
