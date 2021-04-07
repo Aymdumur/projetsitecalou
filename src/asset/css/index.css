@@ -1,148 +1,234 @@
-html{
-    background-color:#f2f2f2;
-    font-size: 5vw;
+@font-face {
+  font-family: "OpenDyslexic-Regular";
+  src: url("./../font/OpenDyslexic-Regular.eot");
+  src: url("./../font/OpenDyslexic-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("./../font/OpenDyslexic-Regular.svg#OpenDyslexic-Regular") format("svg"),
+    url("./../font/OpenDyslexic-Regular.ttf") format("truetype"),
+    url("./../font/OpenDyslexic-Regular.woff") format("woff"),
+    url("./../font/OpenDyslexic-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
 }
 
-#anime > h2{
-    border-bottom: solid grey 2px;
-    text-align: center;
+/* Le HTML pour des écrand téléphone de moins de 700px */
+
+html {
+  background-color: #f2f2f2;
+  font-size: 5vw;
 }
 
-.anime__Gundam h2{
-    font-size: 20px;
+/* Le header */
+
+header {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  height: auto;
+  background-color: #464646;
+  padding: 0 1rem 0 1rem;
 }
 
-.anime__Gundam h1{
-    font-size: 30px;
+header > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 3rem;
 }
 
-.anime__Gundam img, .anime__Gundam video{
+/* les boutons du header */
+
+header button {
+  color: white;
+  text-decoration: none;
+  background-color: #464646;
+  padding: 0.1rem 1rem 0.1rem 1rem;
+  border: 2px solid white;
+}
+
+header button:hover {
+  color: gold;
+  background-color: #464646;
+  border: 2px solid rgb(204, 174, 2);
+}
+
+header button {
+  margin-right: 1rem;
+}
+
+/* La présentation générale de gundam et la première partie */
+
+#anime > h2 {
+  border-bottom: solid grey 2px;
+  text-align: center;
+}
+
+/* La partie présentation d'un animé */
+
+/* Les titres */
+
+.anime__Gundam h2 {
+  font-size: 20px;
+}
+
+.anime__Gundam h1 {
+  font-size: 30px;
+}
+
+/* Les images et vidéos */
+
+.anime__Gundam img,
+.anime__Gundam video {
+  display: none;
+}
+
+/* Une séparation entre chaque partie */
+
+.anime__Gundam {
+  border-bottom: 2px solid grey;
+}
+
+/* Les boutons */
+
+#anime__button button {
+  display: none;
+}
+
+/* Enlève un lien dans la présentation de Char Aznable*/
+
+#G1__characters div:first-of-type a {
+  display: none;
+}
+
+/* Les personnages, Mobiles Suits et sommaires */
+
+/* Réglage des images */
+
+.G__characters img {
+  display: unset;
+  float: right;
+  height: 350px;
+}
+
+.G__mobileSuit img {
+  display: unset;
+  float: left;
+  height: 200px;
+}
+
+.G__summary img {
+  height: 500px;
+}
+
+/* Display flex pour les personnages et Mobiles Suits */
+
+.G__characters,
+.G__mobileSuit {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Enlève les deuxièmes images des Mobiles Suits (si elles en ont) */
+
+.G__mobileSuit div img:nth-of-type(2) {
+  display: none;
+}
+
+/* Réglage du ul de la présentation de Kamille Bidan */
+
+li {
+  list-style: none;
+  margin-bottom: 5px;
+}
+
+ul {
+  margin-left: -40px;
+}
+
+/* Règle CSS pour les écrans de minimum 700px */
+
+@media (min-width: 700px) {
+  /* Réglage taille des textes */
+  html {
+    font-size: 3.5vw;
+  }
+
+  /* Retire l'affichage de chaque animé */
+
+  #G1,
+  #G3,
+  #G2 {
     display: none;
-}
+  }
 
-.anime__Gundam{
-    border-bottom: 2px solid grey;
-}
+  /* Refais apparaitre les boutons, vidéos et image de chaque présentation */
 
-#anime__button button{
-    display: none;
-}
+  #anime__button {
+    display: flex;
+    justify-content: center;
+  }
 
-#G1__characters div:first-of-type a{
-    display: none;
-}
+  #anime__button button {
+    display: unset;
+    font-size: 2.5vw;
+  }
 
-.G__characters img{
-    display:unset;
+  .anime__Gundam img,
+  .anime__Gundam video {
+    display: unset;
+  }
+
+  .anime__Gundam {
+    border-bottom: none;
+  }
+
+  /* Réglage des images */
+
+  .G__mobileSuit img {
+    display: unset;
+    float: left;
+    height: 300px;
+  }
+
+  .G__characters img {
+    display: unset;
     float: right;
-    height: 350px;
-}
+    height: 450px;
+  }
 
-.G__characters, .G__mobileSuit {
+  .G__summary div img {
+    margin-bottom: 20px;
+  }
+
+  /* Mise en page des résumés */
+
+  .G__summary div {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
-.G__mobileSuit img{
-    display:unset;
-    float: left;
-    height: 200px;
-}
+/* Règles CSS pour les écrans de minimum 1200px */
 
-.G__mobileSuit div img:nth-of-type(2){
-    display: none;
-}
+@media (min-width: 1200px) {
+  /* Réglage de la taille des titres / textes / boutons */
+  html {
+    font-size: 1vw;
+  }
 
-.G__summary img{
-    height: 500px;
-}
+  #anime__button button {
+    display: unset;
+    font-size: 0.75vw;
+  }
 
-li{
-    list-style: none;
-    margin-bottom: 5px;
-}
+  .anime__Gundam h2 {
+    font-size: 40px;
+  }
 
-ul{
-    margin-left: -40px;
-}
-
-@media (min-width:700px) {
-    html{
-        font-size: 3.5vw;
-    }
-
-    #G1, #G3, #G2{
-        display: none;
-    }
-
-    #quickchangeNext{
-        position:fixed;
-        right: 10px;
-        bottom: 10px;
-    }
-    #quickchangePrev{
-        position:fixed;
-        right: 10px;
-        bottom: 40px;
-    }
-
-    #anime__button{
-        display: flex;
-        justify-content: center;
-    }
-
-    #anime__button button{
-        display: unset;
-        font-size: 2.5vw;
-    }
-
-    .anime__Gundam img, .anime__Gundam video{
-        display: unset;
-    }
-
-    .anime__Gundam{
-        border-bottom: none;
-    }
-
-    .G__mobileSuit img{
-        display:unset;
-        float: left;
-        height: 300px;
-    }
-
-    .G__characters img{
-        display:unset;
-        float: right;
-        height: 450px;
-    }
-
-    .G__summary div{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .G__summary div img{
-        margin-bottom: 20px;
-    }
-}
-
-@media (min-width:1200px){
-    html{
-        font-size: 1vw;
-    }
-
-    #anime__button button{
-        display: unset;
-        font-size: 0.75vw;
-    }
-
-    .anime__Gundam h2{
-        font-size: 40px;
-    }
-    
-    .anime__Gundam h1{
-        font-size: 50px;
-    }
+  .anime__Gundam h1 {
+    font-size: 50px;
+  }
 }

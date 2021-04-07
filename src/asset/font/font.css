@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'OpenDyslexic-Regular';
+  src: url('OpenDyslexic-Regular.eot');
+  src: url('OpenDyslexic-Regular.eot?#iefix') format('embedded-opentype'),
+       url('OpenDyslexic-Regular.svg#OpenDyslexic-Regular') format('svg'),
+       url('OpenDyslexic-Regular.ttf') format('truetype'),
+       url('OpenDyslexic-Regular.woff') format('woff'),
+       url('OpenDyslexic-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
