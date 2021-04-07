@@ -244,7 +244,8 @@ ul {
   .G__mobileSuit div p,
   li {
     width: 20%;
-    margin-left: 40%;
+    left: auto;
+    right: auto;
   }
 
   li {
@@ -263,7 +264,8 @@ ul {
 
   .G__summary p {
     width: 20%;
-    margin-left: 40%;
+    left: auto;
+    right: auto;
   }
 }
 
